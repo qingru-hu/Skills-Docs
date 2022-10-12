@@ -676,3 +676,10 @@ tail -f xxx.log
 ```
 du -h --max-depth=1 /work/huqr/adaptive_map_binary/
 ```
+
+## Shebang
+```bash
+#!/bin/bash
+#!/bin/python3
+chmod u+x backup.sh
+```
