@@ -683,3 +683,17 @@ du -h --max-depth=1 /work/huqr/adaptive_map_binary/
 #!/bin/python3
 chmod u+x backup.sh
 ```
+## PBS
+```bash
+#!/bin/bash
+#PBS -N downhill
+#PBS -V
+#PBS -lselect=1:ncpus=10:mem=5gb
+#PBS -j oe
+cd bfitpy/
+conda activate binfit
+python binfit.py > log/d1.log 2>&1
+```
+```bash
+qsub -lselect=1:ncpus=1:mem=1gb -I
+```
